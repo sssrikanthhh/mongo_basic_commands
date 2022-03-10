@@ -1,0 +1,99 @@
+1. "use assignment" - creates a database called assignment.
+
+2. "db.createCollection('users')" - create a collection called users in assigment database.
+
+3. db.users.insert({
+"first_name":"joe", 
+"last_name":"doe", 
+"email":"joe@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56}) - inserts one document into users collection in assignment database.
+
+4. db.users.insertMany(
+[{
+"first_name":"joe2", 
+"last_name":"doe", 
+"email":"joe2@abc.com", 
+"gender":"male",
+"ip_address":"69.526.18.70", 
+"age":59},
+{
+"first_name":"joe3", 
+"last_name":"doe", 
+"email":"joe3@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56},
+{
+"first_name":"joe4", 
+"last_name":"doe", 
+"email":"joe4@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56},
+{
+"first_name":"joe5", 
+"last_name":"doe", 
+"email":"joe5@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56},
+{
+"first_name":"joe6", 
+"last_name":"doe", 
+"email":"joe6@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56},
+{
+"first_name":"joe7", 
+"last_name":"doe", 
+"email":"joe7@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56},
+{
+"first_name":"joe8", 
+"last_name":"doe", 
+"email":"joe8@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56},
+{
+"first_name":"joe9", 
+"last_name":"doe", 
+"email":"joe9@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56},
+{
+"first_name":"joe10", 
+"last_name":"doe", 
+"email":"joe10@abc.com", 
+"gender":"male",
+"ip_address":"67.526.09.23", 
+"age":56}]) - inserts nine documents into the users collection in assignment database.
+
+5. db.users.find() - finds all the documents in users collection.
+
+6. db.users.findOne() - gives the first document in the users collection.
+   db.users.findOne({first_name:"joe7"}) - gives the document with has first_name as joe7 in users collection.
+
+7. db.users.update({first_name:"joe6"},{$set:{age:33}}) - finds the document which has first_name as joe6 and updates the age as 33 for that document in users collection.
+
+8. db.users.updateMany({"age":33},{$set: {last_name:"harry"}})
+  - this will find the documents which has age as 33 and updates the last_name as harry in users collection
+
+9. db.users.remove({age:33})
+  - removes all the documents which has age as 33.
+
+10. db.users.deleteOne({age:56})
+  - deletes the first document which has age as 56.
+
+11. db.users.deleteMany({age:56})
+  - deletes all the documents which has age as 56.
+
+12. db.dropDatabase() - deletes the current database in which we are in(here it is assignment).  
+
+ 
